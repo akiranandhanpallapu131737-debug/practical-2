@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[]={2,1,5,3,6,4};
+    int key=4,n=6;
+    bool found=false;
+   
+    for(int i=0;i<n;i++){
+        if(key==arr[i]){
+           cout<<"number found at index "<<i;
+           found=true;
+           break;
+        }
+    }
+    if(!found)
+        cout<<"number not found";
+
+    return 0;
+}
