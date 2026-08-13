@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int arr[]={1,3,5,6,7,8};
+  int st=0,end=5;
+  int key=5;
+ 
+  bool found=false;
+ 
+     while(st<=end){
+         int mid=(st+end)/2;
+             if(arr[mid]==key){
+                 cout<<"number found at index "<<mid;
+                 found=true;
+                 break;
+             }
+             else if (key<arr[mid])
+                 end=mid-1;
+             else
+                 st=mid+1;
+    }
+      if(!found)
+          cout<<"number not found";
+     
+    return 0;
+}
